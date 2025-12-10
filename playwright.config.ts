@@ -42,9 +42,9 @@ export default defineConfig({
   reporter: envConfig.playwright?.reporter ?? 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: process.env.BASE_URL ?? envConfig.env?.BASE_URL,
-    headless: !!process.env.CI ? true : false,
+    /* Base URL*/
+    baseURL: process.env.BASE_URL ?? envConfig.env?.BASE_URL ?? 'http://127.0.0.1:4200',
+    //headless: !!process.env.CI ? true : false,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },

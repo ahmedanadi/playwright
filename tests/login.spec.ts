@@ -64,7 +64,7 @@ test('login fails with wrong password', async ({ page }) => {
   });
 
   // Click Sign in
-  await page.getByRole('button', { name: 'Sign in' }).click();
+  await signIn.login('wrong@gmail.com', 'wrongpassword');
 
   // Assert error message is visible
   const errorMessage = page.getByText('Invalid email or password', { exact: true });

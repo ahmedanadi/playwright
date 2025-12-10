@@ -107,6 +107,6 @@ test('author can delete article and it disappears from feeds', async ({ page, re
   // After deletion, article should not be present in global feed
   await pages.home.goto('/');
   await pages.home.openGlobalFeed();
-  const exists = await pages.home.articleExists({ title: article.title }, 5000);
+  const exists = await pages.home.articleExists({ title: article.title }, 500);
   expect(exists).toBeFalsy();
 });

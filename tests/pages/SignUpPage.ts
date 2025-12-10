@@ -11,7 +11,7 @@ export class SignUpPage extends BasePage {
   signUpButton = this.page.getByRole('button', { name: 'Sign up' });
 
   async goto() {
-    await this.page.goto('http://localhost:4200/#/register');
+    await this.page.goto('/#/register');
   }
 
   async register(user: { username: string; email: string; password: string }) {
