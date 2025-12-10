@@ -1,0 +1,23 @@
+# local and ci test settings
+local:
+  env:
+    BASE_URL: "http://localhost:3000"
+    API_BASE_URL: "http://localhost:8000"
+  playwright:
+    retries: 0
+    workers: 1
+    reporter: "list"
+  browsers:
+    - chromium
+
+ci:
+  env:
+    BASE_URL: "https://staging.example.com"
+    API_BASE_URL: "https://staging.example.com"
+  playwright:
+    retries: 2
+    workers: 1
+    reporter: "list"
+  browsers:
+    - chromium
+    - webkit

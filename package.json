@@ -2,6 +2,7 @@
   "name": "playwright",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {},
   "keywords": [],
   "author": "",
@@ -9,6 +10,9 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.57.0",
-    "@types/node": "^24.10.2"
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.10.2",
+    "js-yaml": "^4.1.1",
+    "uuid": "^13.0.0"
   }
 }
