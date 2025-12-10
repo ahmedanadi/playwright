@@ -26,10 +26,10 @@ export class ArticlePage extends BasePage {
   // Comments
   commentTextarea = this.page.locator('textarea');
   postCommentButton = this.page.getByRole('button', { name: 'Post Comment' });
-  commentItems = this.page.locator('app-article-comment');
-  commentAuthors = this.page.locator('app-article-comment .comment-author');
-  commentBodies = this.page.locator('app-article-comment .card-text');
-  deleteCommentButtons = this.page.locator('app-article-comment button:has-text("Delete")');
+  commentItems = this.page.locator('div.card:has(.comment-author)');
+  commentAuthors = this.page.locator('.card .comment-author');
+  commentBodies = this.page.locator('.card .card-text');
+  deleteCommentButtons = this.page.locator('.card  .ion-trash-a');
 
   // Actions
   async addComment(text: string) {
