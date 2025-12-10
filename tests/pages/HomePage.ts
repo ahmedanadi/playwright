@@ -2,8 +2,8 @@ import { Page } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class HomePage extends BasePage {
-  myFeed = this.page.locator('.feed-toggle', { hasText: 'My Feed' });
-  globalFeed = this.page.locator('.feed-toggle', { hasText: 'Global Feed' });
+    myFeed = this.page.locator('.feed-toggle .nav-link', { hasText: 'My Feed' });  
+    globalFeed = this.page.locator('.feed-toggle .nav-link', { hasText: 'Global Feed' });
 
   emptyFeed = this.page.getByText('No articles are here... yet.');
 
